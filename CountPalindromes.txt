@@ -1,0 +1,8 @@
+Here the palindrome strings are found using recursive approach.
+The loop starts from 1st index. and iterates from next index to last using the 2nd loop.
+Then we take each subString and check if palindrome using isPalindrome method
+In isPalindrome method, 
+   if the length of the string is one,it return true ie each letter is palindrome condition is satisfied here.
+   else it again checks if the curret string first index and last index is same, ie palindrome check,
+   if so it again calls the isPalindrome method and passes the new string excluding the first and last characters, ie
+    it checks whether the substring again contains a palindrome string

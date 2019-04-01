@@ -1,0 +1,6 @@
+Here we first check if there the array integers are consecutive or not
+Then we find the wall heightdifference and gap differnce ie how many walls can be inserted.
+If gap is present,we find which stick is having maximum height.
+How many gaps need to be filled more is also found out and temp height of the wall.
+If gap is not present, the wall height is assumed to be the min of stickheights +1
+max returns the max all height which the maximum of available max height and local max height
