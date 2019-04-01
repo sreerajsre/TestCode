@@ -1,0 +1,23 @@
+public static int maxHeight(int[] stickPositions, int[] stickHeights) {
+        int n = stickPositions.length;
+        int max = 0;
+        int heightDiffernce;
+        int gapLength;
+        int localMax;
+        for (int i=0; i<n-1; i++) {
+            if (stickPositions[i]<stickPositions[i+1]-1) {
+                heightDiffernce =  Math.abs(stickHeights[i+1] - stickHeights[i]);
+                gapLength = stickPositions[i+1] - stickPositions[i] - 1;
+                localMax = 0;
+                if (gapLength > 1) {
+                    int low = Math.max(stickHeights[i+1], stickHeights[i]) + 1;
+                    int remainingGap = gapLength- heightDiffernce - 1;
+                    localMax = low + remainingGap/2;
+                } else {
+                    localMax = Math.min(stickHeights[i+1], stickHeights[i]) + gapLength;
+                }
+                max = Math.max(max, localMax);
+            }
+        }
+        return max;
+    }
